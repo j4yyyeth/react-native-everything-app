@@ -16,7 +16,7 @@ const FlatListBasics = () => {
   ];
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.wrapper}>
       <Text>My Flat List</Text>
       <FlatList 
         data={nameData}
