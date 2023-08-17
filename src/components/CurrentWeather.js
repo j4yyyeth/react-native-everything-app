@@ -5,7 +5,7 @@ import {
   SafeAreaView,
   StyleSheet,
   Button,
-  Alert,
+  // Alert,
 } from "react-native";
 // import { MaterialIcons } from '@expo/vector-icons';
 
@@ -13,11 +13,11 @@ const CurrentWeather = () => {
   const [count, setCount] = useState(0);
   const updatePos = () => {
     setCount(count + 1);
-    Alert.alert("Increased Count by 1");
+    // Alert.alert("Increased Count by 1");
   };
   const updateNeg = () => {
     setCount(count - 1);
-    Alert.alert("Decreased Count by 1");
+    // Alert.alert("Decreased Count by 1");
   };
   return (
     <SafeAreaView style={styles.wrapper}>
@@ -35,6 +35,9 @@ const CurrentWeather = () => {
           accessibilityLabel="Increase Count by clikcing button"
         />
         <Text style={styles.text}>{count}</Text>
+        {
+          count === 5 && <Text style={styles.bool}>The count has hit 5</Text>
+        }
       </View>
     </SafeAreaView>
   );
@@ -55,6 +58,10 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 50,
   },
+  bool: {
+    color: "white",
+    fontSize: 25,
+  }
 });
 
 export default CurrentWeather;
