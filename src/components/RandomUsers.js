@@ -3,7 +3,7 @@ import { Text, SafeAreaView, StyleSheet, Image, Button } from "react-native";
 import axios from "axios";
 
 const RandomUsers = () => {
-  const [user, setUser] = useState("");
+  const [ user, setUser ] = useState("");
   const fetchRandomUser = async () => {
     try {
       const userData = await axios.get("https://randomuser.me/api/");
